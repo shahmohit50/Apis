@@ -17,6 +17,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(cors()); 
 app.use(bodyParser.json());
+app.use(express.static(__dirname));
 
 app.post('/users', (req, res) => {
   const user = req.body;
